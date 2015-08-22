@@ -1,0 +1,8 @@
+div.qitem{width:88px;height:88px;background:url(bg.gif) no-repeat;overflow:hidden;position:relative;float:left;cursor:pointer;margin:0px; margin-right:27px;margin-bottom:27px;}
+div.qitem img{border:0;position:absolute;z-index:0}
+div.qitem span.caption{position:absolute;z-index:1;color:#ccc;display:block}
+div.topLeft, div.topRight, div.bottomLeft, div.bottomRight{position:absolute;background-repeat:no-repeat;float:left;z-index:1}
+div.topLeft{background-position:top left}
+div.topRight{background-position:top right}
+div.bottomLeft{background-position:bottom left}
+div.bottomRight{background-position:bottom right}

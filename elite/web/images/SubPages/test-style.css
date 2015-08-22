@@ -1,0 +1,22 @@
+.slides
+{
+	list-style:none;
+	padding:0px;margin:0px;
+	min-height:170px;
+}
+.slides li p.box_content{
+	font-size:12px;
+	text-align:justify;
+	padding:0px;margin:0px;
+}
+.slides li .box_content_title{
+	padding:0px;margin:0px;
+	font-size:11px;
+	font-weight:bold;
+	margin-top:10px;
+	padding-bottom:18px;
+}
+#quote_wrap { 
+	padding:0px;margin:0px;
+	padding-bottom:20px;
+}

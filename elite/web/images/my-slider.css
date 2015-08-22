@@ -1,0 +1,398 @@
+@charset "UTF-8";
+
+#MySlider {
+	position: relative;
+	min-width: 980px;
+	width: 100%;
+	background: #a6b1b3;
+	overflow: hidden;
+	height: 503px;
+}
+#MySlider .slider_container {
+}
+#MySlider .slide {
+	display: none;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+}
+#MySlider .slide img {
+	width: 100%;
+}
+#MySlider .slidePrev {
+	background: #000;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: -50px;
+	opacity: 0.2;
+	z-index: 10;
+}
+#MySlider .slidePrev span {
+	background-image: url("arrow_left.png");
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#MySlider .slideNext {
+	background: #000;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	right: -50px;
+	opacity: 0.2;
+	z-index: 10;
+}
+#MySlider .slideNext span {
+	background-image: url("arrow_right.png");
+	width: 50px;
+	height: 50px;
+	float: left;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#MySlider .timers {
+	height: 4px;
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	z-index: 3;
+	display: none;
+}
+#MySlider .timer {
+	height: 4px;
+	width: 40px;
+	background-color: #000;
+	float: left;
+	margin-right: 10px;
+}
+#MySlider .progress {
+	height: 4px;
+	width: 0%;
+	/*background-color: #FC3;*/
+	float: left;
+}
+#MySlider .timer:first-child .progress {
+	background-color: #cd2033;
+}
+#MySlider .timer:first-child + .timer .progress {
+	background-color: #1e9949;
+}
+#MySlider .timer:first-child + .timer + .timer .progress {
+	background-color: #0070af;
+}
+#MySlider .timer:first-child + .timer + .timer + .timer .progress {
+	background-color: #fecf1d;
+}
+#MySlider .slide_content {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#MySlider .slide_content_wrap { /* Slider Text Content Container Style */
+	max-width: 980px;
+	margin: 8% auto 0;
+}
+#MySlider .slide_content_wrap.right {
+	max-width: 550px;
+	padding-left: 30px;
+	margin: 5% auto 0 8%;
+}
+#MySlider .slide_content_wrap.right1 {
+	max-width: 550px;
+	padding-left: 30px;
+	margin: 5% auto 0 60%;
+}
+#MySlider .slide_content_wrap.left{
+	max-width: 550px;
+	padding-left: 0px;
+	margin: 8% auto 0 8%;
+}
+
+#MySlider .trd-slide .slide_content_wrap {
+	margin: 5% auto 0;
+}
+#MySlider .title {  /* Slider Title Style */
+	opacity: 0;
+	color: #333;
+	font-size: 50px;
+	margin:0px;
+	letter-spacing: -1px;
+	line-height: 65px;
+	padding-bottom: 20px;
+	font-style: normal;
+	font-weight: 400;
+}
+#MySlider .description { /* Slider Description Style */
+	opacity: 0;
+	color: #333;
+	font-size: 25px;
+	padding-bottom: 20px;
+	clear: both;
+	margin-top: 2px;
+	line-height: 30px;
+	font-style: normal;
+	font-weight: 300;
+}
+#MySlider .description1 { /* Slider Description Style */
+	opacity: 0;
+	color: #FFF;
+	font-size: 25px;
+	padding-bottom: 10px;
+	clear: both;
+	margin-top: 20px;
+	line-height: 30px;
+	text-decoration:underline;
+	font-style: normal;
+	font-weight: 300;
+}
+#MySlider .description2{ /* Slider Description Style */
+	opacity: 0;
+	color: #000;
+	font-size: 25px;
+	padding-bottom: 10px;
+	clear: both;
+	float:left;
+	left:0px;
+	margin-top: 10px;
+	line-height: 30px;
+	text-decoration:underline;
+	font-style: normal;
+	font-weight: 300;
+}
+
+#MySlider .readmore { /* Slider Read More button Style */
+	background: #7BBB2A;
+	/*box-shadow: 0 1px 4px #A9A7A7;
+	-moz-box-shadow: 0 1px 4px #A9A7A7;
+	-webkit-box-shadow: 0 1px 4px #A9A7A7;*/
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	line-height: 50px;
+	text-align: center;
+	opacity: 0;
+	display: inline-block;
+	padding: 0 30px;
+}
+#MySlider .readmore:hover {
+	text-decoration: none;
+	border: none;
+	color: #000;
+}
+#MySlider .title, #MySlider .description, #MySlider .readmore {
+	margin-top: -10px;
+}
+#MySlider .whiteText .title, #MySlider .whiteText .description {
+	color: #fff;
+}
+.snd-slide {
+	background: url("../images/sol-bg-grey.jpg") no-repeat scroll left top;
+	background-size: cover;
+}
+.snd-slide .slide_content_wrap {
+	text-align: center;
+}
+#MySlider .snd-slide .description {
+	margin: 0px;
+	padding-bottom: 10px;
+}
+/* ------------------------------- Media Query Max Width 1300, Min Width 720 ------------------------------- */
+
+@media only screen and (max-width: 1440px) {
+#MySlider .slide_content_wrap {
+	margin-top: 8%;
+}
+#MySlider .slide_content_wrap.right {
+	max-width: 550px;
+	padding-left: 430px;
+}
+#MySlider .slide_content_wrap.left{
+	max-width: 550px;
+	padding-left: 30px;
+}
+}
+@media only screen and (min-width:720px) and (max-width: 1300px) {
+#MySlider {
+	min-width: 100%;
+	height: 400px;
+}
+#MySlider .slide_content_wrap {
+	margin-left: 100px;
+	margin-top: 6%;
+}
+#MySlider .slide_content_wrap.right {
+	margin-left: 0;
+}
+#MySlider .title {
+	font-size: 32px;
+	line-height: 40px
+}
+#MySlider .description {
+	font-size: 16px;
+	line-height: 20px;
+	padding-bottom: 5px;
+}
+#MySlider .slide_content_wrap.right {
+	padding-left: 10%;
+	max-width: 95%;
+}
+#MySlider .readmore {
+	padding: 0 10px;
+	line-height: 30px;
+	font-size: 12px;
+}
+}
+
+/* -------------------------------  Media Query Max Width 719 ------------------------------- */
+
+@media only screen and (max-width:719px) {
+#MySlider {
+	min-width: 90%;
+	height: 100px;
+}
+#MySlider .slide_content_wrap {
+	max-width: 90%;
+}
+#MySlider .slide_content_wrap .title {
+	font-size: 18px;
+	line-height: 20px;
+	padding-bottom: 10px;
+}
+#MySlider .slide_content_wrap.right {
+	padding-left: 5%;
+}
+#MySlider .slide_content_wrap .description {
+	font-size: 12px;
+	line-height: 12px;
+	margin: 5px 0;
+	padding-bottom: 10px;
+}
+#MySlider .snd-slide img {
+	margin-top: 0px !important;
+}
+#MySlider .readmore {
+	padding: 0 10px;
+	line-height: 25px;
+	font-size: 12px;
+}
+#MySlider .timers {
+	display: none;
+}
+#MySlider .slide_content {
+	cursor: pointer;
+}
+#appStoreInfo {
+	border-bottom: #EEE 1px solid;
+	clear: both;
+	margin-bottom: 40px;
+	padding-bottom: 25px;
+	padding-left: 290px;
+	padding-top: 70px;
+	position: relative;
+}
+#appStoreInfo .peopleAppImage {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+#appStoreInfo h3 {
+	font-size: 23px;
+	font-weight: bold;
+	line-height: 18px;
+	margin-bottom: 0;
+	padding-bottom: 18px;
+}
+#appStoreInfo p {
+	font-size: 13px;
+	line-height: 20px;
+	padding-bottom: 18px;
+}
+#appStoreInfo p a {
+	color: #0500ff;
+}
+#appStoreInfo .storeLinks .appStoreIcon {
+	background-image: url("/people/img/app-store-icon.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 38px;
+	margin-left: 10px;
+	text-indent: -9999px;
+	width: 111px;
+}
+#appStoreInfo .storeLinks .appStoreIcon.appStore {
+	background-position: left top;
+}
+#appStoreInfo .storeLinks .appStoreIcon.googlePlay {
+	background-position: right top;
+}
+#appStoreInfo .storeLinks .appStoreIcon:first-child {
+	margin-left: 0;
+}
+#headercontainer {
+	position: relative;
+}
+.user-det {
+	color: #444444;
+	font-family: arial;
+	font-size: 11px;
+	min-width: 400px;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 38px;
+}
+#headercontainer .lo .goto-link {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 600;
+	width: 180px;
+}
+.slide_content a.sign-learn, .slide_content a.sign-learn:hover {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #DDDDDD;
+	box-shadow: none;
+	color: #666666;
+	font-size: 13px;
+	letter-spacing: 0;
+	line-height: 34px;
+	width: 120px;
+	text-align: center;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+}
+.goto-link {
+	background: none repeat scroll 0 0 #D82133 !important;
+	border-color: #D82133 !important;
+	color: #FFFFFF !important;
+	font-size: 15px !important;
+	text-transform: none !important;
+	width: 170px !important;
+}
+#hw {
+	min-height: 560px;
+}
+@media only screen and (max-width:480px) {
+ #MySlider .slide_content_wrap .title {
+ font-size:12px;
+ margin:0;
+ padding:0px;
+}
+ #MySlider .slide_content_wrap .description {
+ font-size:10px;
+ margin:0;
+ padding:0px;
+}
+}
